@@ -1,8 +1,10 @@
 require("dotenv").config();
 require("./config/db");
 const userRouter = require("./api/user");
+var cors = require("cors");
 
 const app = require("express")();
+app.use(cors());
 
 const port = process.env.PORT;
 

@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import Analysis from "./components/Analysis";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import ReportUpload from "./components/ReportUpload";
 
 class App extends Component {
   constructor() {
@@ -100,6 +101,16 @@ class App extends Component {
                 path="/upload"
                 component={() => (
                   <Upload
+                    account={this.state.account}
+                    patient={this.state.patient}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/report-upload"
+                component={() => (
+                  <ReportUpload
                     account={this.state.account}
                     patient={this.state.patient}
                   />

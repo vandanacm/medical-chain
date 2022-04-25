@@ -108,7 +108,7 @@ class App extends Component {
               />
               <Route
                 exact
-                path="/report-upload"
+                path="/reportUpload"
                 component={() => (
                   <ReportUpload
                     account={this.state.account}

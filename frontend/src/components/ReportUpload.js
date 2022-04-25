@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export default class ReportUpload extends Component {
   constructor(props) {
@@ -85,24 +86,21 @@ export default class ReportUpload extends Component {
             htmlFor="file"
             style={{ fontSize: "40px", color: "black", width: "70%" }}
           >
-            Upload Medical Report
+            Upload Chest X-Ray
           </h4>
           <form
             onSubmit={this.onSubmit}
             encType="multipart/form-data"
             style={{ width: "70%" }}
           >
-            <br></br>
-            <br></br>
-            <input
+            {/* <input
               type="file"
               id="file"
               name="file"
               onChange={this.captureFile}
               required
             />
-            <br></br>
-            <br></br>
+            <br></br> */}
             <label htmlFor="fname" style={{ fontSize: "20px" }}>
               Name
             </label>
@@ -115,7 +113,6 @@ export default class ReportUpload extends Component {
               onChange={this.handleInputChange}
               required
             />
-            <br></br>
             <br></br>
             <label htmlFor="age" style={{ fontSize: "20px" }}>
               Age
@@ -130,7 +127,6 @@ export default class ReportUpload extends Component {
               required
             />
             <br></br>
-            <br></br>
             <label htmlFor="doc" style={{ fontSize: "20px" }}>
               Requested By
             </label>
@@ -143,7 +139,6 @@ export default class ReportUpload extends Component {
               onChange={this.handleInputChange}
               required
             />
-            <br></br>
             <br></br>
             <label htmlFor="accessionNumber" style={{ fontSize: "20px" }}>
               Accession Number
@@ -158,7 +153,10 @@ export default class ReportUpload extends Component {
               required
             />
             <br></br>
-            <br></br>
+            <label htmlFor="file" style={{ fontSize: "20px" }}>
+              Upload Chest X-Ray
+            </label>
+            <br />
             <input
               type="file"
               id="file"

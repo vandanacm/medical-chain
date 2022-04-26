@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink, withRouter, Link } from "react-router-dom";
 //import Identicon from './identicon';
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import "../styles/navbar.css";
 
 class Navbar extends Component {
